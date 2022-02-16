@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Sen';
+    line-height: 1.6;
+}
+
+p {
+    font-weight: 500;
+    font-size: smaller;
+}
+
+.fruit-img {
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.landing-heading {
+    font-weight: bold;
+    color: #715541;
+    font-size: 3rem;
+}
+
+.signup-btn {
+    height: 2.5rem;
+    width: 12rem;
+    left: 343px;
+    top: 560px;
+    font-size: smaller;
+    border-radius: 23px;
+    background-color: #CAB5BC;
+    color: #fff;
+    border: none;
+    margin: 1% 0;
+}
+
+.login-btn {
+    height: 2.5rem;
+    width: 12rem;
+    left: 343px;
+    top: 560px;
+    font-size: smaller;
+    border-radius: 23px;
+    border: 2px solid #CAB5BC;
+    background-color: #fff;
+    color: #715541;
+    margin: 1% 0;
+}
+
+.intro-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8%;
+}
+
+.google-png {
+    width: 3%;
+    margin: 0 1%;
+}
+
+a {
+    text-decoration: none;
+}
