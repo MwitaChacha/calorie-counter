@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load socialaccount %}
 {% block content %}
 
 <div class="container-fluid">
@@ -10,8 +11,8 @@
                 <h1 class="landing-heading">CALORIE TRACKER</h1>
                 <p class="my-3">We are what we eat. Keep track of the calories you consume.</p>
                 <a href="/accounts/signup/"> <button class="btn btn-primary signup-btn">SIGN UP</button></a>
-                <button class="btn btn-primary login-btn">LOGIN</button>
-                <p class="text-muted my-2">Continue with <a href="/accounts/google/login">Google</a><span><img class="google-png" src="{% static 'images/google.png'%}" alt=""></span></p>
+                <a href="/accounts/login/"> <button class="btn btn-primary login-btn">LOGIN</button></a>
+                <p class="text-muted my-2">Continue with <a href="{% provider_login_url 'google' %}">Google</a><span><img class="google-png" src="{% static 'images/google.png'%}" alt=""></span></p>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
