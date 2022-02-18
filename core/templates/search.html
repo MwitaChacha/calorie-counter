@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container text-center mt-5">
+<h3 class="home-heading">Get the nutrition lowdown on <br> all your meals and everything in between</h3>
+<p>Search your favourite food to know their content.</p>
+</div>
+
+<div class="container text-center search-section">
+    <form method="get">
+        <input id="food" class="mx-3" type="text" name="food"
+            placeholder="    Enter food here"> <br>
+        <button class="btn btn-primary  search-btn" type="submit">Get Calories</button>
+    </form>
+</div>
+{% endblock %}

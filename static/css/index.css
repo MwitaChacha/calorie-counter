@@ -12,8 +12,8 @@ p {
 }
 
 .fruit-img {
-    width: 22rem;
-    height: 22rem;
+    width: 20rem;
+    height: 20rem;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -76,5 +76,38 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 5%;
+    padding: 2% 5%;
+}
+
+.fa-solid {
+    color: #715541;
+}
+
+.search-btn {
+    height: 2.5rem;
+    width: 12rem;
+    left: 343px;
+    top: 560px;
+    font-size: smaller;
+    border-radius: 23px;
+    border: 2px solid #A1B57D;
+    background-color: #A1B57D;
+    color: #fff;
+    margin: 1% 0;
+}
+input[type='text'] {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    width: 15rem;
+}
+::placeholder {
+    font-weight: 500;
+    font-size: smaller;
+}
+
+.search-section {
+   
+    margin-top: 5%;
 }
