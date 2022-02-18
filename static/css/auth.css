@@ -42,6 +42,13 @@ input[type='password'] {
     border-left-style: hidden;
     border-bottom-style: groove;
 }
+input{
+    margin: 3% 0;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+}
 
 input[type='checkbox'] {
     font-size: small;
@@ -82,6 +89,10 @@ input[type='checkbox'] {
     width: 9%;
     margin: 0 1%;
 }
+.googl-png {
+    width: 3%;
+    margin: 0 1%;
+}
 
 .fruit-img {
     width: 22rem;
@@ -101,4 +112,17 @@ input[type='checkbox'] {
     flex-direction: row;
     align-items: center;
     padding: 8%;
+}
+.register-page {
+background: linear-gradient(90deg, #fff 50%, #E9E5D6 50%);
+height: 100vh;
+}
+.register-form {
+    width: 50%; 
+    margin: 5% auto;
+    font-size: smaller;
+    padding: 3%;
+}
+.quote {
+    margin-top: 10%;
 }
