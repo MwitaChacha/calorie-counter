@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Sen';
+    line-height: 1.6;
+}
+
+p {
+    font-weight: 500;
+    font-size: smaller;
+}
+
+
+.form-signin {
+    width: 60%;
+    height: 50%;
+    padding: 3%;
+    margin: auto;
+    
+
+}
+.heading {
+    font-weight: bold;
+    color: #715541;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+input[type='email'] {
+    margin: 3% 0;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    
+}
+
+input[type='password'] {
+    margin: 3% 0;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+}
+
+input[type='checkbox'] {
+    font-size: small;
+}
+
+::placeholder {
+    font-weight: 500;
+    font-size: smaller;
+}
+
+.signup-btn {
+    height: 2.5rem;
+    width: 10rem;
+    left: 343px;
+    top: 560px;
+    font-size: smaller;
+    border-radius: 23px;
+    background-color: #CAB5BC;
+    color: #fff;
+    border: none;
+    margin: 2%
+}
+
+.login-btn {
+    height: 2.5rem;
+    width: 10rem;
+    left: 343px;
+    top: 560px;
+    font-size: smaller;
+    border-radius: 23px;
+    border: 2px solid #CAB5BC;
+    background-color: #fff;
+    color: #715541;
+    margin: 2%;
+}
+
+.google-png {
+    width: 9%;
+    margin: 0 1%;
+}
+
+.fruit-img {
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.landing-heading {
+    font-weight: bold;
+    color: #715541;
+    font-size: 3rem;
+}
+
+.intro-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8%;
+}

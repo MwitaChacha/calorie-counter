@@ -65,3 +65,16 @@ p {
 a {
     text-decoration: none;
 }
+
+.home-heading {
+    font-weight: bold;
+    color: #715541;
+    font-size: 2rem;
+}
+
+.home-intro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 5%;
+}

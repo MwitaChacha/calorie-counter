@@ -23,6 +23,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'fontawesomefree',
     'bootstrap5',
     'cloudinary',
     'core',
@@ -70,8 +71,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'calorie.wsgi.application'
+ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS =True
 
-
+LOGIN_REDIRECT_URL='/'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
