@@ -10,7 +10,7 @@ MEAL_CHOICES = (
 )
 class User(models.Model):
     user = models.ForeignKey(User,on_delete = models.CASCADE)
-    image = CloudinaryField('image')
+    image = CloudinaryField('image',blank=True)
     email =  models.CharField(max_length=60)
     username = models.CharField(max_length=100,default='')
     def __str__(self):
@@ -33,6 +33,7 @@ class Food(models.Model):
 class Meal(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, related_name='eatee')
     food = models.CharField(max_length=255,null=True)
+    accompaniment = models.CharField(max_length=255,null=True)
     meal = models.CharField(max_length=60, choices=MEAL_CHOICES, default="Breakfast")
     schedule_time = models.DateTimeField(null=True)
     posted_at = models.DateTimeField(auto_now_add=True, null=True)
