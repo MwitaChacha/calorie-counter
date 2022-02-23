@@ -22,34 +22,44 @@
     </div>
 </div>
 
-<div class="container-fluid">
+<div class="container">
+    <h6 class="food-heading text-center">My Foods</h6>
+</div>
+
+<div class="container-fluid saved-foods">
     <div class="container">
         {% for i in foods %}
-        <div class="card food-card">
+        {% if i.name %}
+        <div class="card food-card my-5">
             <p class="card-header">{{i.name}}</p>
             <div class="card-body">
                 <p class="">Nutrients</p>
                 <div class="d-flex">
                     <div class="container">
-                        <p>Serving:  {{serving}}  grams</p>
-                        <p>Calories:  {{calories}}</p>
-                        <p>SUGAR:  {{sugar}}  grams</p>
-                        <p>FIBRE:  {{fibre}}  grams</p>
-                        <p>SODIUM:  {{sodium}}  mg</p>
+                        <p>Serving:  {{i.serving}}  grams</p>
+                        <p>Calories:  {{i.calories}}</p>
+                        <p>SUGAR:  {{i.sugar}}  grams</p>
+                        <p>FIBRE:  {{i.fibre}}  grams</p>
+                        <p>SODIUM:  {{i.sodium}}  mg</p>
                         
                 
                     </div>
                     <div class="container">
-                        <p>FAT:  {{fat}}  grams</p>
-                        <p>CHOLESTEROL:  {{cholesterol}} mg</p>
-                        <p>PROTEINS:  {{protein}} grams</p>
-                        <p>CARBOHYDRATES:  {{carbs}} grams</p>
+                        <p>FAT:  {{i.fat}}  grams</p>
+                        <p>CHOLESTEROL:  {{i.cholesterol}} mg</p>
+                        <p>PROTEINS:  {{i.protein}} grams</p>
+                        <p>CARBOHYDRATES:  {{i.carbs}} grams</p>
                     </div>
                 </div>
 
-                <a href="{% url 'delete' food_id=user.id %}" class="btn btn-primary">Delete</a>
+                <a href="{% url 'delete' pk=user.id %}" class="btn btn-danger mx-auto"><i class="fa-solid fa-trash-can"></i></a>
             </div>
         </div>
+        
+        {% else %}
+
+        <p>Search for foods to display</p>
+        {% endif %}
         {% endfor %}
     </div>
 </div>

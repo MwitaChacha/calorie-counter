@@ -82,7 +82,8 @@ def search(request):
     return render(request, 'search.html', context)
 
 
-def delete(request, food_id):
-    food =  get_object_or_404(Food, id=food_id)
-    food.delete()
-    return redirect('index') 
+def delete(request, pk):
+    Food.objects.filter(id=pk).delete()
+    food = Food.objects.all() 
+    context = {'food':food}
+    return render(request, 'index.html', context) 

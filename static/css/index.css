@@ -126,3 +126,14 @@ input[type='image']{
     border: none;
     
 }
+
+.saved-foods {
+    margin: 5% auto;
+padding: 2%;
+}
+
+.food-heading {
+    font-weight: bold;
+    color: #715541;
+    font-size: 2rem;
+}

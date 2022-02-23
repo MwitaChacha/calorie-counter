@@ -32,6 +32,7 @@ class Profile(models.Model):
     email =  models.CharField(max_length=60, blank=True)
     username = models.CharField(max_length=100,default='')
     food = models.ForeignKey(Food,on_delete=models.CASCADE, related_name='foo',null=True)
+    posted_at = models.DateTimeField(auto_now=True)
     def __str__(self):
         return self.username 
 
