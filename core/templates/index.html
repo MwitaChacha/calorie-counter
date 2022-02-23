@@ -9,7 +9,8 @@
     <div class="row home-intro">
         <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="container text-center">
-                <img class="fruit-img d-none d-sm-block d-md-block m-2 mx-auto" src="{% static 'images/grape.jpg' %}" alt="">
+                <img class="fruit-img d-none d-sm-block d-md-block m-2 mx-auto" src="{% static 'images/grape.jpg' %}"
+                    alt="">
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
@@ -27,20 +28,29 @@
         <div class="card food-card">
             <p class="card-header">{{i.name}}</p>
             <div class="card-body">
-              <p class="">Nutrients</p>
-              <div class="d-flex">
-                   <div>
-<p></p>
-                  </div>
-                  <div>
+                <p class="">Nutrients</p>
+                <div class="d-flex">
+                    <div class="container">
+                        <p>Serving:  {{serving}}  grams</p>
+                        <p>Calories:  {{calories}}</p>
+                        <p>SUGAR:  {{sugar}}  grams</p>
+                        <p>FIBRE:  {{fibre}}  grams</p>
+                        <p>SODIUM:  {{sodium}}  mg</p>
+                        
+                
+                    </div>
+                    <div class="container">
+                        <p>FAT:  {{fat}}  grams</p>
+                        <p>CHOLESTEROL:  {{cholesterol}} mg</p>
+                        <p>PROTEINS:  {{protein}} grams</p>
+                        <p>CARBOHYDRATES:  {{carbs}} grams</p>
+                    </div>
+                </div>
 
-                  </div>
-              </div>
-              
-              <a href="{% url 'delete' food_id=user.id %}" class="btn btn-primary">Delete</a>
+                <a href="{% url 'delete' food_id=user.id %}" class="btn btn-primary">Delete</a>
             </div>
-          </div>
-          {% endfor %}
+        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
