@@ -11,7 +11,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-
+    foods = Food.objects.filter(user_id = current_user.id).all()
     try:
         if not request.user.is_authenticated:
             return redirect('/accounts/login/')
@@ -20,7 +20,7 @@ def index(request):
     except ObjectDoesNotExist:
         return redirect('update')
 
-    return render(request, 'index.html',{"profile":profile})
+    return render(request, 'index.html',{"profile":profile,'foods':foods})
 
 
 
