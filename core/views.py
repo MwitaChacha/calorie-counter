@@ -7,7 +7,7 @@ from decouple import config
 from django.contrib.auth.models import User
 from .forms import *
 from .models import *
-
+from django.http import HttpResponse
 
 
 def index(request):
@@ -16,7 +16,7 @@ def index(request):
         if not request.user.is_authenticated:
             return redirect('/accounts/login/')
         current_user = request.user
-        profile = User.objects.get(user=current_user)
+        profile = Profile.objects.get(user=current_user)
     except ObjectDoesNotExist:
         return redirect('update')
 
@@ -37,6 +37,13 @@ def update(request):
         else:
             form = ProfileForm()
     return render(request, 'update.html', {'form': form})
+
+def profile(request, pk):
+    user = User.objects.get(pk=pk)
+    profile = Profile.objects.filter(user=user).all()
+    current_user = request.user
+   
+    return render(request, 'profile.html', {'profile':profile,'user':user})
 
 
 def search(request):
@@ -64,6 +71,9 @@ def search(request):
         cholesterol=items[0]['cholesterol_mg']
         protein=items[0]['protein_g']
         carbs=items[0]['carbohydrates_total_g']
+
+        saved_food = Food.objects.create(name=name,calories=calories,fat=fat,sugar=sugar,sodium=sodium,protein=protein,carbs=carbs,fibre=fibre)
+        saved_food.save()
         context = {
             'items':items,'sugar':sugar,'fibre':fibre,'serving':serving,'sodium':sodium,'fat':fat,'calories':calories,'cholesterol':cholesterol,'protein':protein,'carbs':carbs,'name':name
         }
@@ -71,15 +81,3 @@ def search(request):
     return render(request, 'search.html', context)
 
 
-def meals(request):
-    current_user = request.user
-    form = MealForm(request.POST, request.FILES)
-    if request.method == 'POST':
-        if form.is_valid():
-            meal = form.save(commit=False)
-            meal.user = request.user
-            meal.save()
-            return redirect('index')
-        else:
-            form = MealForm()
-    return render(request, 'meals.html',{'form':form})

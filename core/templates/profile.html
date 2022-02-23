@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for i in profile %}
+<div class="container text-center">
+    <img class="fruit-img" src="{{i.image.url}}" alt="">
+    <h3>{{i.user}}</h3>
+    <p>{{i.email}}</p>
+</div>
+{% endfor %}
+{% endblock %}

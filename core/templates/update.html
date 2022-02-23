@@ -8,7 +8,7 @@
         <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="container text-center mt-5">
                 <h3 class="landing-heading">
-                    Update your profile picture 
+                    Update your details
                 </h3>
                 <img class=" mx-auto fruit-img d-none d-md-block d-sm-block" src="https://thumbnails.production.thenounproject.com/w9lpNXjN_jpMCmmswJ8tBJJw8U4=/fit-in/1000x1000/photos.production.thenounproject.com/photos/7C7DDAC4-D45E-4DE7-BB9C-8589A2DD6DB3.jpg" alt="">
             </div>
@@ -21,7 +21,7 @@
                     {% csrf_token%}
                     {% bootstrap_form form %}
                     <div class="form-group text-center">
-                        <input type="submit" class=" btn btn-primary login-btn" value="Update Picture">
+                        <input type="submit" class=" btn btn-primary login-btn" value="Update Details">
                         <a href="{% url 'index' %}"><button class="btn signup-btn mt-2">Maybe Later</button></a>
                     </div>
                     <input type="hidden" name="next" value="{{next}}">

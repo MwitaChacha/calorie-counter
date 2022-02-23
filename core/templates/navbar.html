@@ -13,13 +13,10 @@
             </li>
           
             <li class="mx-5 px-5 nav-item">
-                <a class="nav-link" href="{% url 'meals' %}"><i class="fa-solid fa-utensils"></i></a>
-            </li>
-            <li class="mx-5 px-5 nav-item">
                 <a class="nav-link" href="{% url 'search' %}"><i class="fa-solid fa-magnifying-glass"></i></i></a>
           
             <li class="nav-item mx-5 px-5">
-                <a class="nav-link" href=""><i class="fa-solid fa-circle-user"></i></a>
+                <a class="nav-link" href="{% url 'profile' pk=user.id %}"><i class="fa-solid fa-circle-user"></i></a>
             </li>
         </ul>
 
