@@ -8,9 +8,10 @@ from django.contrib.auth.models import User
 from .forms import *
 from .models import *
 from django.http import HttpResponse
-
+from django.shortcuts import get_object_or_404
 
 def index(request):
+    current_user = request.user
     foods = Food.objects.filter(user_id = current_user.id).all()
     try:
         if not request.user.is_authenticated:
@@ -71,8 +72,8 @@ def search(request):
         cholesterol=items[0]['cholesterol_mg']
         protein=items[0]['protein_g']
         carbs=items[0]['carbohydrates_total_g']
-
-        saved_food = Food.objects.create(name=name,calories=calories,fat=fat,sugar=sugar,sodium=sodium,protein=protein,carbs=carbs,fibre=fibre)
+        current_user = request.user
+        saved_food = Food.objects.create(user_id=current_user.id,name=name,calories=calories,fat=fat,sugar=sugar,sodium=sodium,protein=protein,carbs=carbs,fibre=fibre,serving=serving)
         saved_food.save()
         context = {
             'items':items,'sugar':sugar,'fibre':fibre,'serving':serving,'sodium':sodium,'fat':fat,'calories':calories,'cholesterol':cholesterol,'protein':protein,'carbs':carbs,'name':name
@@ -81,3 +82,7 @@ def search(request):
     return render(request, 'search.html', context)
 
 
+def delete(request, food_id):
+    food =  get_object_or_404(Food, id=food_id)
+    food.delete()
+    return redirect('index') 
