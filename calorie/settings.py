@@ -72,7 +72,28 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'calorie.wsgi.application'
 ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS =True
+SOCIALACCOUNT_PROVIDERS = {
 
+    "google": {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        "APP": {
+            "client_id": config('client_id'),
+            "secret": config('secret'),
+            "key": config('key')
+        },
+        # These are provider-specific settings that can only be
+        # listed here:
+        "SCOPE": [
+            "profile",
+            "email",
+        ],
+        "AUTH_PARAMS": {
+            "access_type": "online",
+        }
+    }
+}
 LOGIN_REDIRECT_URL='/'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
