@@ -1,7 +1,8 @@
 body {
     margin: 0;
-    box-sizing: border-box;
     padding: 0;
+    box-sizing: border-box;
+    
     font-family: 'Sen';
     line-height: 1.6;
 }
@@ -126,3 +127,4 @@ height: 100vh;
 .quote {
     margin-top: 10%;
 }
+
