@@ -114,10 +114,11 @@ DATABASES = {
 
 
 cloudinary.config( 
-  cloud_name = config('cloud_name'), 
-  api_key = config('api_key'), 
-  api_secret = config('api_secret') 
+  cloud_name = "dgkojinst", 
+  api_key = "938237336993178", 
+  api_secret = "PpuLrBceEgRwpOX1yU1Q2nOJIlE" 
 )
+
 
 
 # Password validation
