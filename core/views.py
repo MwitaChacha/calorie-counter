@@ -10,6 +10,8 @@ from .models import *
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 
+
+@login_required(login_url='/accounts/login/')
 def index(request):
     current_user = request.user
     foods = Food.objects.filter(user_id = current_user.id).all()

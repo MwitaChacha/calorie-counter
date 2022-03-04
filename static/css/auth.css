@@ -115,14 +115,14 @@ input[type='checkbox'] {
     padding: 8%;
 }
 .register-page {
-background: linear-gradient(90deg, #fff 50%, #E9E5D6 50%);
+
 height: 100vh;
 }
 .register-form {
     width: 50%; 
-    margin: 5% auto;
+    margin: 0 auto;
     font-size: smaller;
-    padding: 3%;
+    padding: 7%;
 }
 .quote {
     margin-top: 10%;

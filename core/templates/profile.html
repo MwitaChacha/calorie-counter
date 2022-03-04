@@ -2,10 +2,10 @@
 {% block content %}
 {% for i in profile %}
 <div class="container text-center">
-    <img class="fruit-img" src="{{i.image.url}}" alt="">
+    <img class="avatar-img" src="{{i.image.url}}" alt="">
     <h3>{{i.user}}</h3>
     <p>{{i.email}}</p>
-   <a href="/accounts/logout/"> <button class="btn signup-btn">Logout</button></a>
+   <a href="/accounts/login/"> <button class="btn signup-btn">Logout</button></a>
 </div>
 {% endfor %}
 {% endblock %}

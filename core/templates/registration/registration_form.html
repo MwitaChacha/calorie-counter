@@ -1,0 +1,27 @@
+{% extends 'registration/base.html' %}
+
+{% load static %}
+{% load bootstrap5 %}
+{% block content %}
+<div class="container-fluid register-page">
+
+    <div class="container mx-auto">
+
+        <form class="register-form" id="signup_form" method="post" action="/accounts/register/">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <div class="form-group text-center">
+                <input type="submit" class="btn signup-btn btn-primary" value="SIGN UP">
+            </div>
+
+            <input type="hidden" name="next" value="{{next}}">
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}
