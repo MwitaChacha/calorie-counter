@@ -6,6 +6,6 @@ from django.forms import ModelForm, DateInput
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['image','email']
+        fields = ['image']
 
 

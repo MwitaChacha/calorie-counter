@@ -1,5 +1,5 @@
 {% extends 'account/base.html' %}
-{% load socialaccount %}
+
 {% load static %}
 {% load bootstrap5 %}
 {% block content %}
@@ -13,7 +13,6 @@
                 <a href="/accounts/signup/"> <button class="btn btn-primary signup-btn">SIGN UP</button></a>
                 <button class="btn btn-primary login-btn" data-toggle="modal"
                     data-target=".bd-example-modal-lg">LOGIN</button>
-                <p class="text-muted my-2">Continue with <a href="{% provider_login_url 'google' %}">Google</a><span><img class="googl-png" src="{% static 'images/google.png'%}" alt=""></span></p>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -39,9 +38,7 @@
                         <input type="submit" class="btn  btn-primary signup-btn" value="LOGIN">
                  
                     <input type="hidden" name="next" value="{{next}}">
-                    <a href="{% provider_login_url 'google' %}" class="btn btn-danger login-btn" role="button"
-                        aria-pressed="true">Google Sign In <span><img class="google-png"
-                                src="{% static 'images/google.png'%}" alt=""></span></a>
+                    
                     <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
 
                 </form>
@@ -54,9 +51,7 @@
                         <input type="submit" class="btn  btn-primary login-btn btn-sm mt-3" value="LOGIN">
                     </div>
                     <input type="hidden" name="next" value="{{next}}">
-                    <a href="{% provider_login_url 'google' %}" class="btn btn-danger login-btn" role="button"
-                        aria-pressed="true">Google Sign In <span><img class="google-png"
-                                src="{% static 'images/google.png'%}" alt=""></span></a>
+                   
                     <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
                 </form> -->
             </div>
